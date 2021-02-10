@@ -1,0 +1,82 @@
+/* Adds in the fonts, pulling them in from the source */
+@font-face {
+  font-family: "Bluu Next";
+  /* if browser can support woff2, and if it can't use woff */
+  src: url(bluunext.woff2), url(bluunext.woff);
+}
+
+body {
+  font-family: "Bluu Next", Times New Roman;
+  font-size: 24px;
+  line-height: 1.25;
+  background-color: #edc7a9;
+  /* this gives a gradient using css - top to bottom fade from solid white to clear (so you can see the background-color underneath) */
+  background-image: linear-gradient(180deg, #ffffff, rgba(255, 255, 255, 0));
+  color: #000000;
+  /* 100vh is 100% of the height of the browser height */
+  height: 100vh;
+  transition: background-color 0.5s;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px 0 10px 0;
+}
+
+/* 10vmin is 10% of the minimum of the height of the browser or the width of the browser */
+h2 {
+  font-size: 10vmin;
+}
+
+/* styles the section tag to be in the middle of the viewport */
+section {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+/* getting a circle appearing using css rather than an image */
+section div.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #3e78ed;
+  /* makes it a circle */
+  border-radius: 50%;
+  /* could also use margin: auto or i"nline-block" lets it listen to the "text-align: center" from above */
+  display: inline-block;
+  transition: background-color 0.5s;
+}
+
+section a {
+  color: #000000;
+}
+
+footer {
+  /* fix it to bottom left corner */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* give bar a colour to test how it looks */
+  /* background-color: red; */
+  /* stretch it across the page */
+  width: 100%;
+  /* 30px padding all around the edge makes it bigger */
+  padding: 30px;
+  /* moves all content into the middle in both directions */
+  display: flex;
+  /* centres things horizontally */
+  justify-content: center;
+  /* centres things vertically */
+  align-items: center;
+}
+
+/* picks all the images in the footer */
+footer img {
+  /* gives each image a margin so they have spaces between them */
+  margin: 0 10px 0 10px;
+  /* gives the little hand when you hover over the links */
+  cursor: pointer;
+}
